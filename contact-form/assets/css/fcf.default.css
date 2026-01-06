@@ -9,6 +9,7 @@
 .fcf-button, .fcf-input, .fcf-textarea, .fcf-select select, .fcf-file-cta, .fcf-file-name {
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   align-items: center;
   border: 1px solid transparent;
   border-radius: 4px;
