@@ -1,13 +1,12 @@
-# Azure Static Website Hosting
+# Azure Budget Static Site
 
-This repository contains a static website setup optimized for hosting on Azure Static Web Apps, including a functional contact form powered by PHP.
+A cost-optimized static website hosting solution on Azure with integrated contact form functionality.
 
-## Features
+## Architecture
 
-- **Static Website Hosting**: Ready-to-deploy static site structure
-- **Contact Form**: Integrated PHP-based contact form using FreeContactForm.com script
-- **Responsive Design**: Mobile-friendly form styling
-- **Email Integration**: Supports SMTP and standard email sending via PHPMailer
+For a detailed overview of the cost-optimized system architecture, including pricing estimates and deployment strategies, see [architecture/overview.md](architecture/overview.md).
+
+The architecture leverages Azure's free tiers and consumption-based pricing to minimize costs while providing scalable static website hosting with dynamic contact form capabilities.
 
 ## Project Structure
 
@@ -16,8 +15,9 @@ azure-static-website-hosting/
 ├── .gitignore           # Git ignore file
 ├── LICENSE              # MIT License
 ├── README.md            # This file
+├── RENAME.md            # Repository rename instructions
 ├── index.html           # Sample homepage
-├── architecture/        # (Intended for architecture diagrams/docs)
+├── architecture/        # Architecture documentation and diagrams
 └── contact-form/
     ├── fcf.form.htm     # Main contact form HTML
     └── assets/
@@ -103,11 +103,16 @@ The contact form uses a free script from FreeContactForm.com. To configure:
 
 2. Open `http://localhost:8000/fcf.form.htm` in your browser
 
-## Important Notes
+## Cost Optimization
 
-- The contact form script is provided by FreeContactForm.com and must retain attribution as per their license.
-- For production use, consider security implications of PHP forms and implement proper validation.
-- Azure Static Web Apps don't natively support PHP; use Azure Functions or App Service for dynamic content.
+This setup is designed for minimal costs:
+
+- **Free Tier**: Azure Static Web Apps (up to 100GB bandwidth)
+- **Pay-per-Use**: App Service consumption plan (~$0.20 per 1M requests)
+- **Free Email**: Gmail SMTP or SendGrid free tier
+- **Typical Cost**: $0-5/month for personal/business sites
+
+See the [architecture documentation](architecture/overview.md) for detailed cost analysis.
 
 ## License
 
